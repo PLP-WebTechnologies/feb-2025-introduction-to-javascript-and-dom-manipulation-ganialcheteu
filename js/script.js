@@ -12,12 +12,14 @@ linkAssigment.style.color = "#000000";
 // change dynamically the content of the linkAssigment
 function changeContent() {
   linkAssigment.addEventListener("mouseover", () => {
+    content.style.transition = "500ms ease-in-out"; 
     content.innerHTML = "visit the assigment in remote repository with gitHub";
     content.style.color = "#cd0fac";
     linkAssigment.textContent = "GitHub Repository";
   });
   linkAssigment.addEventListener("mouseout", () => {
     content.innerHTML = "";
+    content.style.color = "";
     linkAssigment.innerHTML = "Assigment Week 5";
   });
 }
